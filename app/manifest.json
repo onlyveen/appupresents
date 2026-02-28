@@ -1,0 +1,26 @@
+{
+  "name": "Appu Presents - Premium Apparel for Women",
+  "short_name": "Appu Presents",
+  "description": "Founded on September 09, 2023, Appu Presents is a movement dedicated to bringing high-end fashion to every woman in India.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#F5E6D3",
+  "theme_color": "#8B0000",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "/images/icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/images/SEO.jpg",
+      "sizes": "1200x630",
+      "type": "image/jpeg",
+      "purpose": "any"
+    }
+  ],
+  "categories": ["shopping", "lifestyle"],
+  "lang": "en-IN"
+}
