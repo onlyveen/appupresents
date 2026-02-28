@@ -150,21 +150,21 @@ export default function Nav() {
           <a
             href="#about"
             onClick={closeMobileMenu}
-            className="text-brand-maroon text-2xl font-bona-nova-sc hover:opacity-70 transition-opacity"
+            className="text-brand-maroon! text-2xl font-bona-nova-sc hover:opacity-70 transition-opacity"
           >
             About us
           </a>
           <a
             href="#stores"
             onClick={closeMobileMenu}
-            className="text-brand-maroon text-2xl font-bona-nova-sc hover:opacity-70 transition-opacity"
+            className="text-brand-maroon! text-2xl font-bona-nova-sc hover:opacity-70 transition-opacity"
           >
             Our Stores
           </a>
           <a
             href="#timings"
             onClick={closeMobileMenu}
-            className="text-brand-maroon text-2xl font-bona-nova-sc hover:opacity-70 transition-opacity"
+            className="text-brand-maroon! text-2xl font-bona-nova-sc hover:opacity-70 transition-opacity"
           >
             Timings
           </a>
