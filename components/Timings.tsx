@@ -57,13 +57,13 @@ export default function Timings() {
   }, []);
 
   const timings = [
-    { day: "Monday", hours: "11:00 AM – 9:00 PM" },
-    { day: "Tuesday", hours: "11:00 AM – 9:00 PM" },
-    { day: "Wednesday", hours: "11:00 AM – 9:00 PM" },
-    { day: "Thursday", hours: "11:00 AM – 9:00 PM" },
-    { day: "Friday", hours: "11:00 AM – 9:00 PM" },
-    { day: "Saturday", hours: "11:00 AM – 9:00 PM" },
-    { day: "Sunday", hours: "12:00 PM – 8:00 PM" },
+    { day: "Monday", hours: "10:30 AM - 9:30 PM" },
+    { day: "Tuesday", hours: "10:30 AM - 9:30 PM" },
+    { day: "Wednesday", hours: "10:30 AM - 9:30 PM" },
+    { day: "Thursday", hours: "10:30 AM - 9:30 PM" },
+    { day: "Friday", hours: "10:30 AM - 9:30 PM" },
+    { day: "Saturday", hours: "10:30 AM - 9:30 PM" },
+    { day: "Sunday", hours: "10:30 AM - 9:30 PM" },
   ];
 
   return (
