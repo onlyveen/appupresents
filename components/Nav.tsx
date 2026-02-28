@@ -9,16 +9,29 @@ export default function Nav() {
   const mobileMenuRef = useRef<HTMLDivElement>(null);
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [isMobile, setIsMobile] = useState(false);
 
   useEffect(() => {
+    // Check if mobile on mount
+    setIsMobile(window.innerWidth < 1024);
+
     // Scroll detection
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 100);
     };
 
-    window.addEventListener("scroll", handleScroll);
+    // Resize detection for mobile check
+    const handleResize = () => {
+      setIsMobile(window.innerWidth < 1024);
+    };
 
-    return () => window.removeEventListener("scroll", handleScroll);
+    window.addEventListener("scroll", handleScroll);
+    window.addEventListener("resize", handleResize);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+      window.removeEventListener("resize", handleResize);
+    };
   }, []);
 
   useEffect(() => {
@@ -61,14 +74,14 @@ export default function Nav() {
     <>
       <nav
         ref={navRef}
-        className={`fixed top-0 left-0 w-full px-6 flex items-center text-brand-maroon text-2xl whitespace-nowrap z-[1000] transition-all duration-300 ${
+        className={`fixed top-0 left-0 w-full px-6 flex items-center text-brand-maroon text-2xl whitespace-nowrap z-1000 transition-all duration-300 ${
           isScrolled
             ? "bg-brand-beige justify-between  py-2.5"
             : "justify-center gap-10 py-5"
         }`}
       >
         {/* Logo - shown when scrolled or on mobile */}
-        {(isScrolled || window.innerWidth < 1024) && (
+        {(isScrolled || isMobile) && (
           <a href="/" className="w-[40.718px] h-[42.431px] lg:w-[40.718px] lg:h-[42.431px] cursor-pointer">
             <Image
               src="/images/icon.svg"
@@ -131,7 +144,7 @@ export default function Nav() {
       {/* Mobile Menu Drawer */}
       <div
         ref={mobileMenuRef}
-        className="fixed top-0 right-0 h-full w-[80%] max-w-sm bg-brand-beige z-[999] translate-x-full lg:hidden shadow-2xl"
+        className="fixed top-0 right-0 h-full w-[80%] max-w-sm bg-brand-beige z-999 translate-x-full lg:hidden shadow-2xl"
       >
         <div className="flex flex-col gap-8 p-8 pt-24">
           <a
